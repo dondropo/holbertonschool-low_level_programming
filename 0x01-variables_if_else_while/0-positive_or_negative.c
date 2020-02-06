@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-*main -
+*main - C variables
 *description: C variables
 *Return: 0
 */
