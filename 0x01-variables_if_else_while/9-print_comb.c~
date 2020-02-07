@@ -1,0 +1,22 @@
+#include <stdio.h>
+/**
+ *main - C variables
+ *Description: C variables
+ *Return: 0
+ */
+int main(void)
+{
+int num = 0;
+while (num < 10)
+{
+putchar(num + '0');
+if (n < 9)
+{
+putchar(',');
+putchar(' ');
+}
+num++;
+}
+putchar('\n');
+return (0);
+}
