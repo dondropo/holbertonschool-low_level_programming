@@ -1,17 +1,17 @@
 #include <stdio.h>
 /**
- *main - C variables
- *Description: C variables
- *Return: 0
- */
+*main - C variables
+*Description: C variables
+*Return: 0
+*/
 int main(void)
 {
-  int num = 0;
-  while (num < 10)
-    {
-      putchar(num + '0');
-      num++;
-    }
-  putchar('\n');
-  return (0);
+int num = 0;
+while (num < 10)
+{
+putchar(num + '0');
+num++;
+}
+putchar('\n');
+return (0);
 }
