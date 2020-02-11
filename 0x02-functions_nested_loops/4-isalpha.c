@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* _islower - check the lowercase
+* _isalpha - checks for alphabetic character.
 *@c: variable
 *Return: Always 0.
 */
