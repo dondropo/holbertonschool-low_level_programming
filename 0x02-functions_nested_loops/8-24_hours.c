@@ -1,7 +1,6 @@
 #include "holberton.h"
 /**
- * print_last_digit - program that prints the last digit of a number
- * @l: last digit of a number
+ * jack_bauer - program that prints the last digit of a number
  * Return: always a
  */
 void jack_bauer(void)
