@@ -4,6 +4,7 @@
  *@dest: returns concatenated string
  *@src: string to be concatenated into dest
  *@n: bytes that dest has to use from src
+ *Return: returns dest's concatenated string
  */
 char *_strncat(char *dest, char *src, int n)
 {
