@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ *_strchr - locates a C character in a S string
+ *@s: string to find c character
+ *@c: character to be found into s string
+ */
 char *_strchr(char *s, char c)
 {
 	int i;
