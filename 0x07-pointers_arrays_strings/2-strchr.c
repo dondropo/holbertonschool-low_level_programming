@@ -3,6 +3,7 @@
  *_strchr - locates a C character in a S string
  *@s: string to find c character
  *@c: character to be found into s string
+ *Return: resturns to the string + 1 if c is found and null if it isn't
  */
 char *_strchr(char *s, char c)
 {
