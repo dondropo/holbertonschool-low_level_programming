@@ -1,18 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - init funct.
  * @argc: number of arguments.
- * @argv: arguments pessed
+ * @argv: string of entered arg.
  * Return: returns 0.
-*/
-int main(int argc __attribute__((unused)), char *argv[] __attribute__((unused)))
+ */
+int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s\n", argv[i]);
-	}
+	if (argc != 3)
+		printf("Error\n");
+	else
+		printf("%d\n",  atoi(argv[1]) * atoi(argv[2]));
 
 	return (0);
 }
