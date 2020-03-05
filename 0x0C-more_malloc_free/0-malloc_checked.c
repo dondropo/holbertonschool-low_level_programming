@@ -7,11 +7,15 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *ptr = malloc(b);/**create the pointer to be returned*/
-
-	if (b == 0)/**fail case*/
-	{
-		exit(98);
-	}
+	void *ptr = NULL;/**create the pointer to be returned*/
+		if (b == 0)
+		{
+			exit(98);
+		}
+		ptr = malloc(b);
+		if (ptr == NULL)
+		{
+			exit(98);
+		}
 	return (ptr);/**returns pointer to allocated mem*/
 }
