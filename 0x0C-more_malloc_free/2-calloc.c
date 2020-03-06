@@ -15,12 +15,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	ptr = malloc(size*nmemb);/**create dynamic space*/
+	ptr = malloc(size * nmemb);/**create dynamic space*/
 	if (ptr == 0)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < size * nmemb; i++)/**go thru the entire space, using i counter*/
+	for (i = 0; i < size * nmemb; i++)/**go thru the entire space*/
 	{
 		ptr[i] = 0;
 	}
