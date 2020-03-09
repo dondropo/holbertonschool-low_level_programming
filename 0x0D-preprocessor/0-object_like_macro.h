@@ -1,4 +1,6 @@
-#ifndef AMAZING_H/**declare header name*/
-#define AMAZING_H/** declare header*/
+#ifndef SIZE_H
+#define SIZE_H
+
 #define SIZE 1024/**declare macro "SIZE"*/
-#endif
+
+#endif /*SIZE_H*/
