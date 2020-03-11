@@ -13,6 +13,8 @@ struct dog
 	char *owner;
 };
 
+typedef struct dog dog_t;
+
 int _strlen(char *s);
 char *_memcpy(char *dest, char *src, unsigned int n);
 void init_dog(struct dog *d, char *name, float age, char *owner);
