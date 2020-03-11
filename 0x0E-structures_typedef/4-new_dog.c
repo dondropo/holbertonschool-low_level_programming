@@ -1,94 +1,90 @@
 #include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
-char *_strcpy(char *dest, char *src);
-int _strlen(char *s);
+
 /**
- * new_dog - function that creates a new dog.
- * @name: pointer to name
- * @age: age
- * @owner: owner
- * Return: pointer
+ * new_dog - creates a new dog
+ * @name: name of the new dog
+ * @age: age of the new dog
+ * @owner: name of the owner of the new dog
+ *
+ * Return: pointer to newly created dog, NULL if fail.
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-		int sizeName, sizeOwner;
-		char *name_copy = NULL;
-		char *owner_copy = NULL;
-		/** my pointer to my new dog */
-		dog_t *bulldog;
+	dog_t *new_d;
+	char *c_name, *c_owner;
+	int name_l = 0, owner_l = 0;
 
-		/** creating space for my new dog */
-		bulldog = malloc(sizeof(dog_t));
-		if (bulldog == NULL)
-			return (NULL);
+	name_l = _strlen(name);
+	owner_l = _strlen(owner);
 
-	/** sizes of my pointer */
-	sizeName = _strlen(name);
-	/** creating the space for copy */
-	name_copy = malloc(sizeof(char) * sizeName + 1);
-	if (name_copy == NULL)
+	c_name = malloc(name_l + 1);
+	if (c_name == NULL)
+		return (NULL);
+
+	c_owner = malloc(owner_l + 1);
+	if (c_owner == NULL)
 	{
-		free(bulldog);
+		free(c_name);
 		return (NULL);
 	}
-	/** size of the owner */
-	sizeOwner = _strlen(owner);
-	/** creating the space for the  copy */
-	owner_copy = malloc(sizeof(char) * sizeOwner + 1);
-	if (owner_copy == NULL)
+
+	new_d = malloc(sizeof(dog_t));
+	if (new_d == NULL)
 	{
-		free(name_copy);
-		free(bulldog);
+		free(c_name);
+		free(c_owner);
 		return (NULL);
 	}
-		/** create the copy */
-		_strcpy(name_copy, name);
-		_strcpy(owner_copy, owner);
-	/** filling my new dog structure */
-	bulldog->name = name_copy;
-	bulldog->age = age;
-	bulldog->owner = owner_copy;
-	/** returning my new dog */
-	return (bulldog);
+
+	_memcpy(c_name, name, name_l + 1);
+	_memcpy(c_owner, owner, owner_l + 1);
+
+	new_d->name = c_name;
+	new_d->age = age;
+	new_d->owner = c_owner;
+
+	return (new_d);
 }
 
 /**
- * _strcpy - copy a string to a pointer variable
- * @dest: char pointer parameter dest
- * @src: char pointer parameter source
- * Return: return char
+ * _strlen - obtains the length of a string
+ * @s: char pointer to the first position in string
+ *
+ * Return: the length of the string as an int
  */
-char *_strcpy(char *dest, char *src)
-{
-	int i, j;
 
-	i = 0;
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	j = 0;
-	while (j <= i)
-	{
-		dest[j] = src[j];
-		j++;
-	}
-	return (dest);
-}
-
-/**
- * _strlen - swap a value
- * @s: pointer parameter
- * Return: Always 0 (Success)
- */
 int _strlen(char *s)
 {
-	int counter = 0;
+	int count = 0;
 
-	while (s[counter] != '\0')
+	while (*s != '\0')
 	{
-		counter++;
+		s++;
+		++count;
 	}
-	return (counter);
+	return (count);
+}
+
+/**
+ * _memcpy - function that copies memory area
+ * @dest: pointer to destination of copy
+ * @src: pointer to source of copy
+ * @n: number of bytes of src to be copied onto dest
+ *
+ * Return: pointer to dest
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	int i;
+
+	for (i = 0; n; i++)
+	{
+		dest[i] = src[i];
+		--n;
+	}
+
+	return (dest);
 }
