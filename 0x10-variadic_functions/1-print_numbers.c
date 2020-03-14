@@ -16,7 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	if (separator == NULL)
 	{
-		return;
+		printf(" ");
 	}
 	va_start(list, n);
 		for (count = 0; count < n && n != '\0'; count++)
