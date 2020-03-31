@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  *print_list - prints all elements of a list_t list
- *@h: nod refferencing the struct
+ *@h: pointer refferencing a node
  *
  *Return: returns the counter value
  */

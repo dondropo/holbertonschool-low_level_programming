@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  *list_len - funct that returns the number
- *@h: node refferencing struct
+ *@h: pointer refferencing a node
  *Return: returns the counters value
  */
 size_t list_len(const list_t *h)

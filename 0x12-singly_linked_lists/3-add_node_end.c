@@ -8,32 +8,32 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *lst;
-	list_t *lst2;
+	list_t *new;
+	list_t *temp;
 
-	lst = malloc(sizeof(list_t));
+	new = malloc(sizeof(list_t));
 
-	if (lst == NULL)
+	if (new == NULL)
 	{
 		return (NULL);
 	}
-	lst->len = _strlen(str);
-	lst->str = strdup(str);
-	lst->next = NULL;
+	new->len = _strlen(str);
+	new->str = strdup(str);
+	new->next = NULL;
 	if (*head == NULL)
 	{
-		*head = lst;
+		*head = new;
 	}
 	else
 	{
-		lst2 = *head;
-		while (lst2->next != NULL)
+		temp = *head;
+		while (temp->next != NULL)
 		{
-			lst2 = lst2->next;
+			temp = temp->next;
 		}
-		lst2->next = lst;
+		temp->next = new;
 	}
-	return (lst);
+	return (new);
 }
 /**
  * _strlen - function that returns the length of a string.
