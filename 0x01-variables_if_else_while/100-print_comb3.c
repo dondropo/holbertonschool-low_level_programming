@@ -1,17 +1,19 @@
 #include <stdio.h>
 /**
- *main - main block.
- *
- *Return: none
+ * main - Prints numbers differents combinations
+ * Return: 0;
  */
 int main(void)
 {
 	int a, b, c;
+
 	a = 0;
+
 	while (a < 100)
 	{
-		b = a % 10; /* singles digit */
-		c = a / 10; /* doubles digit */
+		b = a % 10;
+		c = a / 10;
+
 		if (c < b)
 		{
 			putchar(c + '0');
@@ -27,4 +29,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
