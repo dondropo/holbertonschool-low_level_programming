@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
- *get_dnodeint_at_index - Adds a node at the index of a dlistint_t list
+ *get_dnodeint_at_index - returns the nth node of a dlistint_t list
  *@head: pointer to head of the list
- *@index: index of the node to be got
+ *@index: new node of the list
  *
- *Return: node_index in succes or NULL if failed.
+ *Return: NULL if the node doesn't exist.
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
@@ -16,7 +16,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	{
 		return (NULL);
 	}
-	else
+	if (node_index != NULL)
 	{
 		while (counter < index)
 		{
