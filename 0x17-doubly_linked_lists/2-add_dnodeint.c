@@ -4,7 +4,7 @@
  *add_dnodeint - inserts a dlistint_t sized new node at the
  *begining of a dlistint_t list
  *@head: pointer to the header node
- *@n: int value
+ *@n: constant int value into a dlistint_t list
  *
  *Return: new node in success or NULL in failed
  */
@@ -14,11 +14,11 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	new_node = malloc(sizeof(dlistint_t));
 
-	new_node->n = n;
-	new_node->prev = NULL;
-
 	if (new_node == NULL)
 		return (NULL);
+
+	new_node->n = n;
+	new_node->prev = NULL;
 
 	if (*head == NULL)
 	{
