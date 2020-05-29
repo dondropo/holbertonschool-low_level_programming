@@ -3,7 +3,7 @@
  * hash_table_create - function that creates a hash table
  * @size: size of the array
  *
- * Return: NULL in fail case
+ * Return: NULL on fail case, new_table on success
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
@@ -11,7 +11,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int i;
 
 	new_table = malloc(sizeof(hash_table_t));
-	if (new_table == NULL)
+	if (!new_table || !size)
 	{
 		return (NULL);
 	}
