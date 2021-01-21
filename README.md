@@ -1,1 +1,1 @@
-This project is about c
+# Low level programming and algorithm
